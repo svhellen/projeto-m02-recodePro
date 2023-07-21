@@ -9,21 +9,40 @@
     <title>titulo</title>
 </head>
 <body>
-    <h1>Usando HTML / CSS / BOOTSTRAP:</h1>
-    <hr>
-    <ul>
-        <li>Criar um protótipo da primeira versão do site;</li>
-         <li>Criar as páginas:</li>
-             <ol>
-                 <li>Home</li>
-                 <li>Destino</li>
-                 <li>Promoções</li>
-                 <li>Contato</li>
-                 <li>e as demais páginas de acordo com seu modelo de negócio. Usando HTML, CSS e BOOTSTRAP;</li>
-             </ol>
-        <li>As páginas devem ser responsivas ou adaptáveis.</li>
-        <li>Faça as formatações de acordo com a paleta de cores escolhida.</li>
-    </ul>
+    <header>
+        <div class="container" id="nav-container">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo" id="logo">Agência</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="destino.html">Destino</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="promocoes.html">Promoções</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </div>
+    </header>
+
+
+
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus repudiandae in necessitatibus pariatur ipsum esse eaque id neque distinctio excepturi, a consectetur autem suscipit maiores, sunt dolor reiciendis, sed voluptas.</p>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
