@@ -17,8 +17,8 @@
     --text-color: #FFF;
 }
 
-header .container, 
-.container-fluid {
+header {
+    background: blue;
 }
 
 /* Barra de navegação */
@@ -37,7 +37,19 @@ header, .navbar {
     color: var(--cor-principal);
 }
 
-
 .nav-expand-lg, .navbar-nav, .nav-link { 
     padding: 1rem .8rem;
+}
+
+form {
+    max-width: 650px;
+}
+
+.card {
+    min-width: 220px;
+    max-width: 350px;
+}
+
+#top-cidades-br {
+    min-height: 300px;
 }
