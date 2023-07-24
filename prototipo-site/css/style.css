@@ -14,11 +14,9 @@
     --cor3: #EB7417;
     --cor4: #340CEB;
     --cor5: #0CCFEB;
-    --text-color: #FFF;
-}
-
-header {
-    background: blue;
+    --text-color1: #000;
+    --text-color2: #FFF;
+    --text-color3: #d2d2d2;
 }
 
 /* Barra de navegação */
@@ -34,11 +32,22 @@ header, .navbar {
 .navbar-brand:hover, 
 #navbarNav a:hover, 
 .navbar-toggler:focus{
+    font-weight: 700;
     color: var(--cor-principal);
 }
 
 .nav-expand-lg, .navbar-nav, .nav-link { 
     padding: 1rem .8rem;
+}
+
+.btn {
+    background: var(--cor-principal);
+    border: var(--cor-principal);
+}
+
+.btn:hover {
+    background: var(--cor-secundaria);
+    border: var(--cor-secundaria);
 }
 
 form {
@@ -52,4 +61,27 @@ form {
 
 #top-cidades-br {
     min-height: 300px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer a {
+    color: var(--text-color3);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--text-color2);
+    text-decoration: underline;
+}
+
+footer i, footer i:hover {
+    font-size: 1.2em;
+}
+
+.col-md-6 {
+    justify-content: start;
 }
