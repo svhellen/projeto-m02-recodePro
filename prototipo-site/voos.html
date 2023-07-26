@@ -24,7 +24,10 @@
                   <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav col-md-8">
                       <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="voos.html">Passagens</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="destinos.html">Destinos</a>
@@ -48,17 +51,22 @@
           <!-- form nav -->
           <ul class="nav nav-tabs">
             <li class="nav-item form-nav ">
-              <a class="nav-link active" aria-current="page" href="index.html">Hospedagens</a>
+              <a class="nav-link" href="index.html">Hospedagens</a>
             </li>
             <li class="nav-item form-nav ">
-              <a class="nav-link" href="voos.html">Passagens</a>
+              <a class="nav-link active" aria-current="page" href="voos.html">Passagens</a>
             </li>
           </ul>
 
-          
-          <div class="">
-            <label for="f-destino">Destino</label>
-            <input type="text" class="form-control" id="f-destino" placeholder="Para onde vai?">
+          <div class="row">
+            <div class="col">
+              <label for="f-origem">Origem</label>
+              <input type="text" class="form-control" id="f-destino" placeholder="De onde?">
+            </div>
+            <div class="col">
+              <label for="f-destino">Destino</label>
+              <input type="email" class="form-control" id="f-destino" placeholder="Para onde?">
+            </div>
           </div>
           <div class="row">
             <div class="col">
@@ -72,8 +80,15 @@
           </div>
           <div class="row">
             <div class="col">
-              <label for="f-bedrooms">Quartos</label>
-              <input type="number" min="1" max="4" value="1" class="form-control" id="f-bedrooms">
+              <label for="f-classe">Classe</label>
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Econômica</option>
+                <option value="1">Econômica premium</option>
+                <option value="2">Executiva</option>
+                <option value="3">Executiva premium</option>
+                <option value="4">Primeira classe</option>
+                <option value="5">Primeira classe premium</option>
+              </select>
             </div>
             <div class="col">
               <label for="f-adults">Adultos</label>

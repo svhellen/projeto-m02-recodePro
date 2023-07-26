@@ -1,4 +1,6 @@
-@charset "UTF-8"
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap');
 
 * {
     padding: 0;
@@ -7,56 +9,89 @@
 }
 
 :root {
-    --cor-principal: #2482C2;
-    --cor-secundaria: #F68712;
-    --cor1: #0051EB;
-    --cor2: #EBD317;
-    --cor3: #EB7417;
-    --cor4: #340CEB;
-    --cor5: #0CCFEB;
+    --cor1: #5656ff;
+    --cor2: #1718EB;
+    --cor3: #0B0B6B;
+    --cor4: #FFCF00;
+    --cor5: #E65B03;
+
     --text-color1: #000;
     --text-color2: #FFF;
     --text-color3: #d2d2d2;
 }
 
-/* Barra de navegação */
-#logo {
-    width: 50px;
+body {
+    font-family: 'Rubik', sans-serif;
 }
 
-header, .navbar {
-    background: blue;
+/* Barra de navegação */
+#logo {
+    width: 100px;
+    color: var(--cor2);
+}
+
+header, 
+.navbar {
 }
 
 .navbar-brand, 
 .navbar-brand:hover, 
-#navbarNav a:hover, 
-.navbar-toggler:focus{
+#navbarNav a:hover {
     font-weight: 700;
-    color: var(--cor-principal);
+    color: var(--cor2);
 }
 
-.nav-expand-lg, .navbar-nav, .nav-link { 
+.navbar-toggler:focus {
+    color: #1717eb37;
+}
+
+.nav-expand-lg, 
+.navbar-nav, 
+.nav-link { 
     padding: 1rem .8rem;
 }
 
 .btn {
-    background: var(--cor-principal);
-    border: var(--cor-principal);
+    background: var(--cor2);
+    border: var(--cor2);
 }
 
 .btn:hover {
-    background: var(--cor-secundaria);
-    border: var(--cor-secundaria);
+    color: var(--text-color1);
+    background: var(--cor4);
+    border: var(--cor4);
+}
+
+#div-form {
+    background: var(--cor3);
 }
 
 form {
+    background: var(--text-color2);
+    border-radius: 5px;
     max-width: 650px;
+}
+
+.form-nav {
+    width: 48%;
 }
 
 .card {
     min-width: 220px;
     max-width: 350px;
+}
+
+#ver-mais a {
+    color: var(--text-color1);
+    font-size: 1.3em;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+#ver-mais a:hover {
+    color: var(--cor2);
+    font-size: 1.5em;
+    text-decoration: underline;
 }
 
 #top-cidades-br {
@@ -68,8 +103,11 @@ form {
 footer {
     color: var(--text-color3);
     text-align: center;
-    background: var(--cor4);
-    padding: 10px 0;
+    background: var(--cor3);
+}
+
+#footer-logo {
+    width: 200px;
 }
 
 footer a {
@@ -84,7 +122,4 @@ footer a:hover {
 
 footer i, footer i:hover {
     font-size: 1.2em;
-}
-
-#secoes {
 }

@@ -11,6 +11,53 @@
     <title>titulo</title>
 </head>
 <body>
+
+
+  <!-- formulário hospedagem -->
+  <div class="container-fluid py-5" id="div-form">
+    <form class="d-grid gap-4 mx-auto p-3">
+        <!-- form nav -->
+        <ul class="nav nav-tabs">
+          <li class="nav-item form-nav ">
+            <a class="nav-link active" aria-current="page" href="#">Hospedagens</a>
+          </li>
+          <li class="nav-item form-nav ">
+            <a class="nav-link" href="#">Voos</a>
+          </li>
+        </ul>
+
+      <div class="">
+        <label for="f-destino">Destino</label>
+        <input type="email" class="form-control" id="f-destino" placeholder="Para onde vai?">
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="data-check-in">Data check-in</label>
+          <input type="date" class="form-control" id="f-check-in">
+        </div>
+        <div class="col">
+          <label for="data-check-out">Data check-out</label>
+          <input type="date" class="form-control" id="f-check-out">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="f-bedrooms">Quartos</label>
+          <input type="number" min="1" max="4" value="1" class="form-control" id="f-bedrooms">
+        </div>
+        <div class="col">
+          <label for="f-adults">Adultos</label>
+          <input type="number" min="1" max="8" value="1" class="form-control" id="f-adults">
+        </div>
+        <div class="col">
+          <label for="f-kids">Crianças</label>
+          <input type="number" min="0" max="16" value="0" class="form-control" id="f-kids">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Buscar</button>
+    </form>
+  </div>
+
     <h1>Usando HTML / CSS / BOOTSTRAP:</h1>
     <hr>
     <ul>
@@ -26,32 +73,6 @@
         <li>As páginas devem ser responsivas ou adaptáveis.</li>
         <li>Faça as formatações de acordo com a paleta de cores escolhida.</li>
     </ul>
-    <footer class=" text-bg-danger">
-        <div class="container row row-cols g-4 pt-3 mx-auto">
-            <!-- brand logo -->
-          <a class="footer-brand col-12 col-md-4 text-md-start" href="#"><img src="img/logo.png" alt="logo" id="logo">Agência</a>
-          <!-- links footer -->
-          <div class="secoes g-2 col-12 col-md-6 text-md-start">
-            <a href="#" class="">Blog</a>
-            <a href="contato.html" class="">Fale conosco</a>
-            <a href="#" class="">Política de privacidade</a>
-            <a href="#" class="">Termos & Condições</a>
-          </div>
-          <!-- icones redes sociais -->
-          <div class="social-media list-inline col-12 col-md-6 text-md-start">
-            <a class="icon-link icon-link-hover list-inline-item" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);" href="#">
-              <i class="bi bi-youtube"></i>
-            </a>
-            <a  class="icon-link icon-link-hover list-inline-item" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);" href="#">
-              <i class="bi bi-instagram"></i></a>
-            <a  class="icon-link icon-link-hover list-inline-item" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);" href="#">
-              <i class="bi bi-twitter" aria-hidden="true"></i></a>
-            <a  class="icon-link icon-link-hover list-inline-item" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);" href="#">
-              <i class="bi bi-facebook" aria-hidden="true"></i></a>
-          </div>
-          <p class="col-12 col-md-6 text-md-end "> &copy; 2023 Agência</p>
-        </div>
-      </footer>
 
       <footer class="py-5 px-3">
         <div class="row">
