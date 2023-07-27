@@ -76,9 +76,50 @@ form {
     width: 48%;
 }
 
-.card {
+/* #top-cidades-br {
+    display: flex;
+    gap: 16px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+} */
+
+/* #top-cidades-br .carousel-item {
+    max-width: 150px;
+} */
+
+/* #top-cidades-br .carousel-item {
     min-width: 220px;
     max-width: 350px;
+}
+
+#btn-carousel {
+    background: red;
+    min-width: 100px;
+    max-width: 150px;
+} */
+
+#hospedagens .card {
+    min-width: 280px;
+    max-width: 350px;
+}
+
+#pacotes .card {
+    min-width: 300px;
+}
+
+.rate {
+    display: inline;
+    color: var(--text-color2);
+    background: rgb(0, 164, 0);
+    border-radius: 5px;
+    padding: 0px 5px;
+    margin-right: 5px;
+}
+
+.bi-star-fill,
+.bi-star-half,
+.bi-star {
+    color: #FFCF00;
 }
 
 #ver-mais a {
@@ -94,9 +135,9 @@ form {
     text-decoration: underline;
 }
 
-#top-cidades-br {
+/* #top-cidades-br {
     min-height: 300px;
-}
+} */
 
 /* footer */
 
@@ -123,3 +164,21 @@ footer a:hover {
 footer i, footer i:hover {
     font-size: 1.2em;
 }
+
+/* @media (min-width: 768px) {
+    
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(25%);
+    }
+    
+    .carousel-inner .carousel-item-start.active, 
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-25%);
+    }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+  transform: translateX(0);
+} */
