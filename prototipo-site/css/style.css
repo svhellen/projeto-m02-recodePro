@@ -69,11 +69,16 @@ header,
 form {
     background: var(--text-color2);
     border-radius: 5px;
-    max-width: 650px;
+    max-width: 1100px;
 }
 
 .form-nav {
     width: 48%;
+}
+
+main {
+    max-width: 1100px;
+    margin: auto;
 }
 
 /* #top-cidades-br {
@@ -98,9 +103,15 @@ form {
     max-width: 150px;
 } */
 
+#top-cidades-br {
+    min-width: 240px;
+    max-width: 950px;
+}
+
 #hospedagens .card {
     min-width: 280px;
     max-width: 350px;
+    margin: auto;
 }
 
 #pacotes .card {

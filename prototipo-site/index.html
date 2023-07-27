@@ -45,7 +45,6 @@
                 </div>
             </nav>
     </header>
-    <main class="">
 <!-- formulário hospedagem -->
       <div class="container-fluid py-5" id="div-form">
         <form class="d-grid gap-4 mx-auto p-3">
@@ -57,7 +56,7 @@
               <a class="nav-link active" aria-current="page" href="index.html"><i class="bi bi-building"></i> Hospedagens</a>
             </li>
             <li class="nav-item form-nav ">
-              <a class="nav-link" href="voos.html">
+              <a class="nav-link" href="passagens.html">
                 <i class="bi bi-airplane"></i>
                 Passagens</a>
             </li>
@@ -66,12 +65,12 @@
           
           <div class="">
             <label for="f-destino">Destino</label>
-            <input type="text" class="form-control" id="f-destino" placeholder="Para onde vai?">
+            <input type="text" class="form-control" id="f-destino" placeholder="Para onde vai?" required>
           </div>
           <div class="row">
             <div class="col">
               <label for="data-check-in">Data check-in</label>
-              <input type="date" class="form-control" id="f-check-in">
+              <input type="date" class="form-control" id="f-check-in" required>
             </div>
             <div class="col">
               <label for="data-check-out">Data check-out</label>
@@ -95,258 +94,257 @@
           <button type="submit" class="btn btn-primary">Buscar</button>
         </form>
       </div>
+    <main>
 
-      <!-- cards hospedagens  -->
-
-      <section id="hospedagens" class="container-fluid py-3 my-3 mx-auto">
-        <h1>Hospedagens</h1>
-        <div class="row row-cols g-4 py-3">
-          <div class="col">
-            <div class="card ">
-              <img src="img/hoteis/hotel-5.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">NomeHotel</h5>
-                <div class="pb-3">
-                  <div class="rate">4,9</div>
-                  <div class="d-inline">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                </div>
-                <p><i class="bi bi-geo-alt"></i> nomeLocal</p>
-                
-                <p class="card-text">Breve descrição do hotel.</p>
-                <p>Preço a partir de <strong>R$ Preço</strong></p>
-                <a href="em-construcao.html" class=" btn btn-primary d-block">Ver detalhes</a>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img src="img/hoteis/hotel-3.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">NomeHotel</h5>
-                <div class="pb-3">
-                  <div class="rate">4,5</div>
-                  <div class="d-inline">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-half"></i>
-                  </div>
-                </div>
-                <p><i class="bi bi-geo-alt"></i> nomeLocal</p>
-                <p class="card-text">Breve descrição do hotel.</p>
-                <p>Preço a partir de <strong>R$ Preço</strong></p>
-                <a href="em-construcao.html" class=" btn btn-primary d-block">Ver detalhes</a>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img src="img/hoteis/hotel-8.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">NomeHotel</h5>
-                <div class="pb-3">
-                  <div class="rate">4,7</div>
-                  <div class="d-inline">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-half"></i>
-                  </div>
-                </div>
-                <p><i class="bi bi-geo-alt"></i> nomeLocal</p>
-                <p class="card-text">Breve descrição do hotel.</p>
-                <p>Preço a partir de <strong>R$ Preço</strong></p>
-                <a href="em-construcao.html" class=" btn btn-primary d-block">Ver detalhes</a>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img src="img/hoteis/hotel-2.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">NomeHotel</h5>
-                <div class="pb-3">
-                  <div class="rate">4,3</div>
-                  <div class="d-inline">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-half"></i>
-                  </div>
-                </div>
-                <p><i class="bi bi-geo-alt"></i> nomeLocal</p>
-                <p class="card-text">Breve descrição do hotel.</p>
-                <p>Preço a partir de <strong>R$ Preço</strong></p>
-                <a href="em-construcao.html" class=" btn btn-primary d-block">Ver detalhes</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-<!-- carousel top cidades brs -->
-      <section id="top-cidades-br" class="container-fluid mx-auto">
-        <h1 class="pt-4 pb-2">Descubra o Brasil</h1>
-        <div id="carouselExampleCaptions" class="carousel slide py-3">
-          
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
-          
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="img/cidades/sp.jpg" class="d-block w-100" alt="...">
-              <div class="carousel-caption">
-                <h5>São Paulo</h5>
-                <p>Some representative placeholder content for the first slide.</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="img/cidades/rio.jpg" class="d-block w-100" alt="...">
-              <div class="carousel-caption">
-                <h5>Second slide label</h5>
-                <p>Some representative placeholder content for the second slide.</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="img/cidades/salvador.jpg" class="d-block w-100" alt="...">
-              <div class="carousel-caption">
-                <h5>Third slide label</h5>
-                <p>Some representative placeholder content for the third slide.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="btn-carousel">
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-          </div>
-          <div class="btn-carousel">
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-              <span class="carousel-control-next-icon " aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div>
-
-        <div class="text-center" id="ver-mais">
-          <a href="destinos.html">Ver mais destinos</a>
-        </div>
-       </section>
-
-<!-- cards pacotes  -->
-
-      <section id="pacotes" class="container-fluid py-3 my-3 mx-auto">
-        <h1>Pacotes</h1>
-        <div class="row row-cols g-4 py-3">
-          <div class="col">
-            <div class="card mb-3" style="max-width: 540px;">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="img/hoteis/hotel-2.jpg" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Pacote para nomeDestino</h5>
-                    <div class="pb-3">
-                      <div class="rate">4,3</div>
-                      <div class="d-inline">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-half"></i>
-                      </div>
+      <div class="d-grid">
+        <!-- cards hospedagens  -->
+        <section id="hospedagens" class="container-fluid py-3 my-3 mx-auto">
+          <h1>Hospedagens</h1>
+          <div class="row row-cols g-4 py-3">
+            <div class="col">
+              <div class="card ">
+                <img src="img/hoteis/hotel-5.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">NomeHotel</h5>
+                  <div class="pb-3">
+                    <div class="rate">4,9</div>
+                    <div class="d-inline">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
                     </div>
-                <p><i class="bi bi-airplane"></i> 
-                  Voo direto Origem <i class="bi bi-arrow-left-right"></i> Destino</p>
-                <p><i class="bi bi-building"></i> Hotel nomeHotel</p>
-                <p class="card-text">Breve descrição do hotel.</p>
-                <p>Preço a partir de <strong>R$ Preço</strong></p>
-                <a href="em-construcao.html" class=" btn btn-primary d-block">Ver detalhes</a>
                   </div>
+                  <p><i class="bi bi-geo-alt"></i> nomeLocal</p>
+        
+                  <p class="card-text">Breve descrição do hotel.</p>
+                  <p>Preço a partir de <strong>R$ Preço</strong></p>
+                  <a href="em-construcao.html" class=" btn btn-primary d-block">Ver detalhes</a>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="card mb-3" style="max-width: 540px;">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="img/hoteis/hotel-1.jpg" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Pacote para nomeDestino</h5>
-                    <div class="pb-3">
-                      <div class="rate">4,3</div>
-                      <div class="d-inline">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-half"></i>
-                      </div>
+            <div class="col">
+              <div class="card">
+                <img src="img/hoteis/hotel-3.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">NomeHotel</h5>
+                  <div class="pb-3">
+                    <div class="rate">4,5</div>
+                    <div class="d-inline">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
                     </div>
-                <p><i class="bi bi-airplane"></i> 
-                  Voo direto Origem <i class="bi bi-arrow-left-right"></i> Destino</p>
-                <p><i class="bi bi-building"></i> Hotel nomeHotel</p>
-                <p class="card-text">Breve descrição do hotel.</p>
-                <p>Preço a partir de <strong>R$ Preço</strong></p>
-                <a href="em-construcao.html" class=" btn btn-primary d-block">Ver detalhes</a>
                   </div>
+                  <p><i class="bi bi-geo-alt"></i> nomeLocal</p>
+                  <p class="card-text">Breve descrição do hotel.</p>
+                  <p>Preço a partir de <strong>R$ Preço</strong></p>
+                  <a href="em-construcao.html" class=" btn btn-primary d-block">Ver detalhes</a>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="card mb-3" style="max-width: 540px;">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="img/hoteis/hotel-5.jpg" class="img-fluid rounded-start" alt="...">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Pacote para nomeDestino</h5>
-                    <div class="pb-3">
-                      <div class="rate">4,3</div>
-                      <div class="d-inline">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-half"></i>
-                      </div>
+            <div class="col">
+              <div class="card">
+                <img src="img/hoteis/hotel-8.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">NomeHotel</h5>
+                  <div class="pb-3">
+                    <div class="rate">4,7</div>
+                    <div class="d-inline">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
                     </div>
-                <p><i class="bi bi-airplane"></i> 
-                  Voo direto Origem <i class="bi bi-arrow-left-right"></i> Destino</p>
-                <p><i class="bi bi-building"></i> Hotel nomeHotel</p>
-                <p class="card-text">Breve descrição do hotel.</p>
-                <p>Preço a partir de <strong>R$ Preço</strong></p>
-                <a href="em-construcao.html" class=" btn btn-primary d-block">Ver detalhes</a>
+                  </div>
+                  <p><i class="bi bi-geo-alt"></i> nomeLocal</p>
+                  <p class="card-text">Breve descrição do hotel.</p>
+                  <p>Preço a partir de <strong>R$ Preço</strong></p>
+                  <a href="em-construcao.html" class=" btn btn-primary d-block">Ver detalhes</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="img/hoteis/hotel-2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">NomeHotel</h5>
+                  <div class="pb-3">
+                    <div class="rate">4,3</div>
+                    <div class="d-inline">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-half"></i>
+                    </div>
+                  </div>
+                  <p><i class="bi bi-geo-alt"></i> nomeLocal</p>
+                  <p class="card-text">Breve descrição do hotel.</p>
+                  <p>Preço a partir de <strong>R$ Preço</strong></p>
+                  <a href="em-construcao.html" class=" btn btn-primary d-block">Ver detalhes</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- carousel top cidades brs -->
+        <section id="top-cidades-br" class="container-fluid mx-auto">
+          <h1 class="pt-4 pb-2">Descubra o Brasil</h1>
+          <div id="carouselExampleCaptions" class="carousel slide py-3">
+        
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+        
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/cidades/sp.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                  <h5>São Paulo</h5>
+                  <p>Some representative placeholder content for the first slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/cidades/rio.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                  <h5>Second slide label</h5>
+                  <p>Some representative placeholder content for the second slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/cidades/salvador.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                  <h5>Third slide label</h5>
+                  <p>Some representative placeholder content for the third slide.</p>
+                </div>
+              </div>
+            </div>
+            <div class="btn-carousel">
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+            </div>
+            <div class="btn-carousel">
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <div class="text-center" id="ver-mais">
+            <a href="destinos.html">Ver mais destinos</a>
+          </div>
+         </section>
+        
+        <!-- cards pacotes  -->
+        <section id="pacotes" class="container-fluid py-3 my-3 mx-auto">
+          <h1>Pacotes</h1>
+          <div class="row row-cols g-4 py-3">
+            <div class="col">
+              <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="img/hoteis/hotel-2.jpg" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Pacote para nomeDestino</h5>
+                      <div class="pb-3">
+                        <div class="rate">4,3</div>
+                        <div class="d-inline">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-half"></i>
+                        </div>
+                      </div>
+                  <p><i class="bi bi-airplane"></i>
+                    Voo direto Origem <i class="bi bi-arrow-left-right"></i> Destino</p>
+                  <p><i class="bi bi-building"></i> Hotel nomeHotel</p>
+                  <p class="card-text">Breve descrição do hotel.</p>
+                  <p>Preço a partir de <strong>R$ Preço</strong></p>
+                  <a href="em-construcao.html" class=" btn btn-primary d-block">Ver detalhes</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="img/hoteis/hotel-1.jpg" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Pacote para nomeDestino</h5>
+                      <div class="pb-3">
+                        <div class="rate">4,3</div>
+                        <div class="d-inline">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-half"></i>
+                        </div>
+                      </div>
+                  <p><i class="bi bi-airplane"></i>
+                    Voo direto Origem <i class="bi bi-arrow-left-right"></i> Destino</p>
+                  <p><i class="bi bi-building"></i> Hotel nomeHotel</p>
+                  <p class="card-text">Breve descrição do hotel.</p>
+                  <p>Preço a partir de <strong>R$ Preço</strong></p>
+                  <a href="em-construcao.html" class=" btn btn-primary d-block">Ver detalhes</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="img/hoteis/hotel-5.jpg" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Pacote para nomeDestino</h5>
+                      <div class="pb-3">
+                        <div class="rate">4,3</div>
+                        <div class="d-inline">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-half"></i>
+                        </div>
+                      </div>
+                  <p><i class="bi bi-airplane"></i>
+                    Voo direto Origem <i class="bi bi-arrow-left-right"></i> Destino</p>
+                  <p><i class="bi bi-building"></i> Hotel nomeHotel</p>
+                  <p class="card-text">Breve descrição do hotel.</p>
+                  <p>Preço a partir de <strong>R$ Preço</strong></p>
+                  <a href="em-construcao.html" class=" btn btn-primary d-block">Ver detalhes</a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="text-center" id="ver-mais">
-          <a href="promocoes.html">Ver mais promoções</a>
-        </div>
-      </section>
+          <div class="text-center" id="ver-mais">
+            <a href="promocoes.html">Ver mais promoções</a>
+          </div>
+        </section>
+      </div>
     </main>
     <footer class="py-5 px-3">
       <div class="row">
@@ -359,13 +357,13 @@
           <div class="col-6 col-md-8 mb-3 text-md-end">
               <ul id="secoes" class="nav pt-5 flex-column flex-md-row ">
               <li class="nav-item mb-2 col">
-                <a href="#" class="nav-link p-0 ">Blog</a></li>
+                <a href="em-construcao.html" class="nav-link p-0 ">Blog</a></li>
               <li class="nav-item mb-2 col">
                 <a href="contato.html" class="nav-link p-0 ">Fale conosco</a></li>
               <li class="nav-item mb-2 col">
-                <a href="#" class="nav-link p-0  ">Política de privacidade</a></li>
+                <a href="em-construcao.html" class="nav-link p-0  ">Política de privacidade</a></li>
               <li class="nav-item mb-2 col">
-                <a href="#" class="nav-link p-0  ">Termos & Condições</a></li>
+                <a href="em-construcao.html" class="nav-link p-0  ">Termos & Condições</a></li>
               </ul>
           </div>
           <!-- copyright e social medias -->
