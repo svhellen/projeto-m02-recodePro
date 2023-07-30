@@ -24,6 +24,10 @@ body {
     font-family: 'Rubik', sans-serif;
 }
 
+.icon {
+    width: 20px;
+}
+
 /* Barra de navegação */
 #logo {
     width: 100px;
@@ -60,6 +64,19 @@ header,
     color: var(--text-color1);
     background: var(--cor4);
     border: var(--cor4);
+}
+/*
+#carousel {
+    height: 100vh;
+}
+
+ .carousel img {
+
+} */
+.carousel-item {
+    height: 100%;
+    background: #333 no-repeat center center/cover;
+    
 }
 
 #div-form {
@@ -176,20 +193,10 @@ footer i, footer i:hover {
     font-size: 1.2em;
 }
 
-/* @media (min-width: 768px) {
+/* @media (min-width: 650px) {
     
-    .carousel-inner .carousel-item-end.active,
-    .carousel-inner .carousel-item-next {
-      transform: translateX(25%);
+    #pacotes .card {
+        min-width: 500px;
     }
     
-    .carousel-inner .carousel-item-start.active, 
-    .carousel-inner .carousel-item-prev {
-      transform: translateX(-25%);
-    }
-}
-
-.carousel-inner .carousel-item-end,
-.carousel-inner .carousel-item-start { 
-  transform: translateX(0);
 } */
