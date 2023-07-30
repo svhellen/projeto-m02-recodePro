@@ -30,7 +30,8 @@
       }
 
       #hospedagens .card {
-        min-width: 150px;
+        width: 200px;
+        margin: 0 1rem 1rem 0;
       }
     </style>
 </head>
@@ -100,8 +101,10 @@
         </div>
     </header>
 
-<!-- formulário hospedagem -->
-      <div class="container-fluid py-5" id="div-form">
+
+
+<!-- formulário hospedagem  LEMBRAR QUE TA DISPLAY NONE-->
+      <div class="container-fluid py-5 d-none" id="div-form">
         <form class="d-grid gap-4 mx-auto p-3">
           
           <!-- form nav -->
@@ -153,13 +156,15 @@
       
     <main>
 
-      <div class="d-grid">
+      <div class="d-block">
         <!-- cards hospedagens  -->
         <section id="hospedagens" class="container-fluid py-3 my-3 mx-auto">
-          <h1 class=" ">Hospedagens</h1>
-          <p class="display-4">Milhares de hotéis para você encontrar o perfeito pras suas férias.</p>
-          <div class="row row-cols g-4 py-3">
-            <div class="col col-md-3">
+          <div class="">
+            <h1 class=" ">Hospedagens</h1>
+            <p class="display-4">Milhares de hotéis para você encontrar o perfeito pras suas férias.</p>
+          </div>
+          <div class=" ">
+            <div class="d-flex flex-nowrap justify-content-between overflow-x-scroll  ">
               <div class="card ">
                 <img src="img/hoteis/hotel-5.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -181,8 +186,6 @@
                   <a href="em-construcao.html" class=" btn btn-primary d-block">Ver detalhes</a>
                 </div>
               </div>
-            </div>
-            <div class="col col-md-3">
               <div class="card">
                 <img src="img/hoteis/hotel-3.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -203,10 +206,8 @@
                   <a href="em-construcao.html" class=" btn btn-primary d-block">Ver detalhes</a>
                 </div>
               </div>
-            </div>
-            <div class="col col-md-3">
               <div class="card">
-                <img src="img/hoteis/hotel-8.jpg" class="card-img-top" alt="...">
+                <img src="img/hoteis/hotel-5.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">NomeHotel</h5>
                   <div class="pb-3">
@@ -225,10 +226,8 @@
                   <a href="em-construcao.html" class=" btn btn-primary d-block">Ver detalhes</a>
                 </div>
               </div>
-            </div>
-            <div class="col col-md-3">
               <div class="card">
-                <img src="img/hoteis/hotel-2.jpg" class="card-img-top" alt="...">
+                <img src="img/hoteis/hotel-3.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">NomeHotel</h5>
                   <div class="pb-3">
@@ -251,7 +250,7 @@
           </div>
         </section>
         
-        <!-- carousel top cidades brs -->
+        <!-- carousel top cidades brs
         <section id="top-cidades-br" class="container-fluid mx-auto">
           <h1 class="pt-4 pb-2">Descubra o Brasil</h1>
           <div id="carouselExampleCaptions" class="carousel slide py-3">
@@ -301,7 +300,7 @@
           <div class="text-center" id="ver-mais">
             <a href="destinos.html">Ver mais destinos</a>
           </div>
-         </section>
+         </section> -->
         
         <!-- cards pacotes  -->
         <section id="pacotes" class="container-fluid py-3 my-3 mx-auto">
