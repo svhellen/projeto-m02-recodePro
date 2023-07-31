@@ -29,24 +29,25 @@ body {
 }
 
 /* Barra de navegação */
+
+header, 
+.navbar,
+.navbar:hover {
+    background: var(--cor3) !important;
+}
+
 #logo {
     width: 100px;
     color: var(--cor2);
 }
 
-header, 
-.navbar {
-}
+.navbar-brand {
+    font-weight: 700;
+} 
 
-.navbar-brand, 
 .navbar-brand:hover, 
 #navbarNav a:hover {
     font-weight: 700;
-    color: var(--cor2);
-}
-
-.navbar-toggler:focus {
-    color: #1717eb37;
 }
 
 .nav-expand-lg, 
@@ -65,14 +66,7 @@ header,
     background: var(--cor4);
     border: var(--cor4);
 }
-/*
-#carousel {
-    height: 100vh;
-}
 
- .carousel img {
-
-} */
 .carousel-item {
     height: 100%;
     background: #333 no-repeat center center/cover;
@@ -118,7 +112,7 @@ main {
     background: red;
     min-width: 100px;
     max-width: 150px;
-} */
+}
 
 #top-cidades-br {
     min-width: 240px;
@@ -133,6 +127,29 @@ main {
 
 #pacotes .card {
     min-width: 300px;
+} */
+
+#hospedagens .card,
+#pacotes .card,
+#passagens .card {
+  width: 230px !important;
+  margin: 0 1rem 1rem 0;
+}
+
+#ver-mais .btn {
+    font-size: .8em;
+    color: var(--text-color1);
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 25px;
+    margin: 10px 0;
+}
+
+#ver-mais a:hover {
+    background: var(--cor4);
+    font-size: 1em;
+    margin: 8px 0;
 }
 
 .rate {
@@ -149,21 +166,8 @@ main {
 .bi-star {
     color: #FFCF00;
 }
-
-#ver-mais a {
-    color: var(--text-color1);
-    font-size: 1.3em;
-    text-decoration: none;
-    margin: 10px 0;
-}
-
-#ver-mais a:hover {
-    color: var(--cor2);
-    font-size: 1.5em;
-    text-decoration: underline;
-}
-
-/* #top-cidades-br {
+/*
+ #top-cidades-br {
     min-height: 300px;
 } */
 
