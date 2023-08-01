@@ -15,78 +15,87 @@
       .navbar {
         background: #0B0B6B !important;
       }
+
     </style>
 </head>
-<body>
-    <header class="row">
-      <!-- navbar -->
-            <nav class="navbar navbar-expand-md navbar-dark">
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="#"><img src="img/teste-logo.png" alt="logo" id="logo">VivaVia Travel</a>
-                  <!-- botao menu telas pequenas -->
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <!-- navbar links -->
-                  <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav col-md-8">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="passagens.html">Passagens</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="destinos.html">Destinos</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="promocoes.html">Promoções</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="contato.html">Contato</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-            </nav>
-    </header>
-<!-- formulário hospedagem -->
-      <div class="container-fluid py-5" id="div-form">
-        <form class="d-grid gap-4 mx-auto p-3">
-            <div>
-                <h1 style="font-size: 1.3em;">Fale conosco</h1>
-                <p>Preencha os campos abaixo para nos enviar uma mensagem</p>
-            </div>
-          
-            <div class="">
-                <label for="f-nome">Nome</label>
-                <input type="text" class="form-control" id="f-nome" placeholder="" required>
-            </div>
-            <div class="">
-                <label for="f-email">Email</label>
-                <input type="email" class="form-control" id="f-email" placeholder="" required>
-            </div>
-            <div class="">
-                    <label for="data-check-in">Celular</label>
-                    <input type="tel" class="form-control" id="f-check-in" placeholder="(99) 99999-9999" required>
-            </div> 
-            <div class="">
-                <label for="f-cpf">CPF</label>
-                <input type="number" class="form-control" id="f-cpf" placeholder="000.000.000-00">
-            </div>
-            <div class="">
-                <label for="f-msg">Mensagem</label>
-                <input type="text" class="form-control" id="f-msg">
-            </div>
+<body class=" bg-body-secondary">
+  <header class="row">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md " id="menu">
+      <div class="container-fluid">
+        <a class="navbar-brand " href="#" style="color: #FFF;"><img src="img/teste-logo.png" alt="logo" id="logo" >VivaVia Travel</a>
+        <!-- botao menu telas pequenas -->
 
-
-          <div class="row">
+        <button class="btn d-lg-none navbar-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive" id="offcanvas-btn">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas-lg offcanvas-end " tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasResponsiveLabel"><img src="img/teste-logo.png" alt="logo" id="logo" >VivaVia Travel </h5>
+            <button type="button" class="btn-close " data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
           </div>
-          
-          <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
+          <div class="  ">
+            <!-- navbar links -->
+            <ul class="navbar-nav offcanvas-body off col-md-8">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="hospedagens.html">Hospedagens</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="passagens.html">Passagens</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="destinos.html">Destinos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="promocoes.html">Promoções</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contato.html">Contato</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-    <main class="">
+  </nav>
+  </header>
+
+    <main class=" ">
+
+<!-- formulário contato -->
+    <div class="container-fluid py-5" id="div-form-contato">
+      <form class="d-grid gap-4 mx-auto p-3">
+          <div>
+              <h1 style="font-size: 1.3em;">Fale conosco</h1>
+              <p>Preencha os campos abaixo para nos enviar uma mensagem</p>
+          </div>
+        
+          <div class="">
+              <label for="f-nome">Nome</label>
+              <input type="text" class="form-control" id="f-nome" placeholder="" required>
+          </div>
+          <div class="">
+              <label for="f-email">Email</label>
+              <input type="email" class="form-control" id="f-email" placeholder="" required>
+          </div>
+          <div class="">
+                  <label for="data-check-in">Celular</label>
+                  <input type="tel" class="form-control" id="f-check-in" placeholder="(99) 99999-9999" required>
+          </div> 
+          <div class="">
+              <label for="f-cpf">CPF</label>
+              <input type="number" class="form-control" id="f-cpf" placeholder="000.000.000-00">
+          </div>
+          <div class="">
+              <label for="f-msg">Mensagem</label>
+              <input type="text" class="form-control" id="f-msg">
+          </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+
         <div class="row text-center gap-3 my-5">
             <div class="card col-12 col-md-4 mx-auto" style="width: 18rem;">
                 <div class="card-body">

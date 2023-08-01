@@ -30,15 +30,43 @@ body {
 
 /* Barra de navegação */
 
-header, 
+header {
+} 
+
+#menu {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    padding: 0;
+}
+
+.offcanvas-lg .offcanvas-header {
+    border-bottom: 2px solid rgba(3, 3, 3, 0.5);
+}
+
+.offcanvas-lg a {
+color: rgba(0, 0, 0, 0.5);
+}
+
+.offcanvas-lg .nav-link .active {
+color: rgba(0, 0, 0, 1) !important;
+font-weight: bold;
+}
+
+.offcanvas-lg a:hover {
+color: rgba(0, 0, 0, 0.7);
+font-weight: bold;
+}
+
+#offcanvas-btn {
+background-color: transparent !important;
+}
+
 .navbar,
 .navbar:hover {
     background: var(--cor3) !important;
 }
 
 #logo {
-    width: 100px;
-    color: var(--cor2);
+    width: 80px;
 }
 
 .navbar-brand {
@@ -130,9 +158,10 @@ main {
 } */
 
 #hospedagens .card,
-#pacotes .card,
-#passagens .card {
-  width: 230px !important;
+#promocoes .card,
+#passagens .card,
+#destinos .card {
+  min-width: 230px !important;
   margin: 0 1rem 1rem 0;
 }
 
@@ -204,3 +233,25 @@ footer i, footer i:hover {
     }
     
 } */
+
+@media (min-width: 650px) {
+    
+    .offcanvas-lg {
+      background: transparent !important;
+    }
+
+    .offcanvas-lg a {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .offcanvas-lg .nav-link .active {
+      color: rgb(255, 255, 255) !important;
+      font-weight: bold;
+    }
+
+    .offcanvas-lg a:hover {
+      color: rgba(255, 255, 255, 0.7);
+      font-weight: bold;
+    }
+    
+}

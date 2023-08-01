@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- fonawesome -->
-    <script src="https://kit.fontawesome.com/fb651eed8c.js" crossorigin="anonymous"></script>
     <!-- bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <!-- bootstrap icons -->
@@ -12,104 +10,234 @@
     <link rel="stylesheet" href="css/style.css">
     <title>VivaVia Travel</title>
     <style>
-      .navbar {
-        background: #0B0B6B !important;
+      header {
+        position: relative;
       }
+
+      header #menu {
+        background: transparent !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+      }
+
+      .offcanvas-lg a {
+        color: rgba(0, 0, 0, 0.5);
+      }
+
+      .offcanvas-lg .nav-link .active {
+        color: rgba(0, 0, 0, 1) !important;
+        font-weight: bold;
+      }
+
+      .offcanvas-lg a:hover {
+        color: rgba(0, 0, 0, 0.7);
+        font-weight: bold;
+      }
+   
+      #offcanvas-btn {
+        background-color: transparent !important;
+      }
+
+      header .carousel-caption {
+        background-color:  rgba(255, 0, 0, 0.363);
+      }
+
+      #carousel-principal .carousel-inner{
+        height: 40em;
+      }
+
+      #carousel-principal .carousel-item:nth-child(1) {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.35),rgba(0, 0, 0, 0.25)), url(img/carousel/desktop-1.jpg);
+      }
+
+      #carousel-principal .carousel-item:nth-child(2) {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.35),rgba(0, 0, 0, 0.25)), url(img/carousel/desktop-2.jpg);
+      }
+
+      #carousel-principal .carousel-item:nth-child(3) {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.35),rgba(0, 0, 0, 0.25)), url(img/carousel/desktop-3.jpg);
+      }
+
+      #hospedagens .card,
+      #pacotes .card,
+      #passagens .card {
+        min-width: 230px !important;
+        margin: 0 1rem 1rem 0;
+      }
+
+      #ver-mais .btn {
+        font-size: .8em;
+        background-color: transparent;
+        border: 1px solid black;
+        border-radius: 25px;
+      }
+
+      .display-4 {
+        color: rgb(73, 73, 73);
+      }
+
+      @media (max-width: 650px) {
+        .display-4 {
+          font-size: 1.3em !important;
+        }
+      }
+
+       @media (min-width: 650px) {
+    
+          .offcanvas-lg {
+            background: transparent !important;
+          }
+
+          .offcanvas-lg a {
+            color: rgba(255, 255, 255, 0.5);
+          }
+
+          .offcanvas-lg .nav-link .active {
+            color: rgb(255, 255, 255) !important;
+            font-weight: bold;
+          }
+
+          .offcanvas-lg a:hover {
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: bold;
+          }
+          
+      }
+
     </style>
 </head>
-<body>
-    <header class="row">
-      <!-- navbar -->
-            <nav class="navbar navbar-expand-md navbar-dark">
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="#"><img src="img/teste-logo.png" alt="logo" id="logo">VivaVia Travel</a>
-                  <!-- botao menu telas pequenas -->
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <!-- navbar links -->
-                  <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav col-md-8">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="passagens.html">Passagens</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="destinos.html">Destinos</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="promocoes.html">Promoções</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="contato.html">Contato</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-            </nav>
-    </header>
-<!-- formulário hospedagem -->
-      <div class="container-fluid py-5" id="div-form">
-        <form class="d-grid gap-4 mx-auto p-3">
-          
-          <!-- form nav -->
-          <ul class="nav nav-tabs">
-            <li class="nav-item form-nav ">
-              
-              <a class="nav-link active" aria-current="page" href="index.html">
-                <img src="img/icon-bed.svg" alt="" class="icon"> Hospedagens</a>
-            </li>
-            <li class="nav-item form-nav ">
-              <a class="nav-link" href="passagens.html">
-                <i class="bi bi-airplane"></i>
-                Passagens</a>
-            </li>
-          </ul>
+<body >
+    <header class="row" >
 
-          
-          <div class="">
-            <label for="f-destino">Destino</label>
-            <input type="text" class="form-control" id="f-destino" placeholder="Para onde vai?" required>
+      <!-- navbar -->
+      <nav class="navbar navbar-expand-md " id="menu">
+        <div class="container-fluid">
+          <a class="navbar-brand " href="#" style="color: #FFF;"><img src="img/teste-logo.png" alt="logo" id="logo" >VivaVia Travel</a>
+          <!-- botao menu telas pequenas -->
+
+          <button class="btn d-lg-none navbar-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive" id="offcanvas-btn">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas-lg offcanvas-end " tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasResponsiveLabel"><img src="img/teste-logo.png" alt="logo" id="logo" >VivaVia Travel </h5>
+              <button type="button" class="btn-close " data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
+            </div>
+            <div class="  ">
+              <!-- navbar links -->
+              <ul class="navbar-nav offcanvas-body off col-md-8">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="hospedagens.html">Hospedagens</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="passagens.html">Passagens</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="destinos.html">Destinos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="promocoes.html">Promoções</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contato.html">Contato</a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="row">
-            <div class="col">
-              <label for="data-check-in">Data check-in</label>
-              <input type="date" class="form-control" id="f-check-in" required>
+        </div>
+        <hr>
+    </nav>
+        <div id="carousel-principal" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+          <!-- <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div> -->
+          <div class="carousel-inner" style="">
+
+            <div class="carousel-item active" id="item1">
+              <div class="carousel-caption d-block">
+                <h1>First slide label</h1>
+                <p>Some representative placeholder content for the first slide.</p>
+              </div>
             </div>
-            <div class="col">
-              <label for="data-check-out">Data check-out</label>
-              <input type="date" class="form-control" id="f-check-out">
+            <div class="carousel-item" id="item2">
+              <div class="carousel-caption d-block">
+                <h1>Second slide label</h1>
+                <p>Some representative placeholder content for the second slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item" id="item3">
+              <div class="carousel-caption d-block">
+                <h1>Third slide label</h1>
+                <p>Some representative placeholder content for the third slide.</p>
+              </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col">
-              <label for="f-bedrooms">Quartos</label>
-              <input type="number" min="1" max="4" value="1" class="form-control" id="f-bedrooms">
-            </div>
-            <div class="col">
-              <label for="f-adults">Adultos</label>
-              <input type="number" min="1" max="8" value="1" class="form-control" id="f-adults">
-            </div>
-            <div class="col">
-              <label for="f-kids">Crianças</label>
-              <input type="number" min="0" max="16" value="0" class="form-control" id="f-kids">
-            </div>
-          </div>
-          <button type="submit" class="btn btn-primary">Buscar</button>
-        </form>
-      </div>
+        </div>
+    </header>
     <main>
 
-      <div class="d-grid">
+
+      <div id="" class="container-fluid py-3 my-3 mx-auto">
+        <div id="top-destinos" >
+          <div>
+            <div class="d-flex justify-content-between" id="ver-mais">
+              <h1>Destinos</h1>
+              <a class="btn" href="destinos.html">Ver mais</a>
+            </div>
+            <p class=" display-4">Lugares mais procurados do Brasil essa semana.</p>
+          </div>
+
+            <div class="card-group gap-3">
+              <div class="card text-bg-dark">
+                <img src="img/cidades/sp.jpg" class="card-img" alt="...">
+                <div class="card-img-overlay">
+                  <h4 class="card-title">Card title</h4>
+                </div>
+              </div>
+              <div class="card text-bg-dark">
+                <img src="img/cidades/rio.jpg" class="card-img" alt="...">
+                <div class="card-img-overlay">
+                  <h4 class="card-title">Card title</h4>
+                </div>
+              </div>
+              <div class="card text-bg-dark">
+                <img src="img/cidades/salvador.jpg" class="card-img" alt="...">
+                <div class="card-img-overlay">
+                  <h4 class="card-title">Card title</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="d-block">
         <!-- cards hospedagens  -->
         <section id="hospedagens" class="container-fluid py-3 my-3 mx-auto">
-          <h1>Hospedagens</h1>
-          <div class="row row-cols g-4 py-3">
-            <div class="col">
+
+          <div>
+            <div class="d-flex justify-content-between" id="ver-mais">
+              <h1 class=" ">Hospedagens</h1>
+              <a class="btn" href="hospedagens.html">Ver mais</a>
+            </div>
+            <p class="display-4">Milhares de hotéis para você encontrar o perfeito pras suas férias.</p>
+          </div>
+          
+          <div class=" ">
+            <div class="d-flex flex-nowrap justify-content-between overflow-x-scroll  ">
               <div class="card ">
-                <img src="img/hoteis/hotel-5.jpg" class="card-img-top" alt="...">
+                <img src="img/hoteis/hotel-5.jpg" class="img-fluid rounded-start" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">NomeHotel</h5>
                   <div class="pb-3">
@@ -129,10 +257,8 @@
                   <a href="em-construcao.html" class=" btn btn-primary d-block">Ver detalhes</a>
                 </div>
               </div>
-            </div>
-            <div class="col">
               <div class="card">
-                <img src="img/hoteis/hotel-3.jpg" class="card-img-top" alt="...">
+                <img src="img/hoteis/hotel-3.jpg" class="img-fluid rounded-start" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">NomeHotel</h5>
                   <div class="pb-3">
@@ -151,10 +277,8 @@
                   <a href="em-construcao.html" class=" btn btn-primary d-block">Ver detalhes</a>
                 </div>
               </div>
-            </div>
-            <div class="col">
               <div class="card">
-                <img src="img/hoteis/hotel-8.jpg" class="card-img-top" alt="...">
+                <img src="img/hoteis/hotel-5.jpg" class="img-fluid rounded-start" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">NomeHotel</h5>
                   <div class="pb-3">
@@ -173,10 +297,8 @@
                   <a href="em-construcao.html" class=" btn btn-primary d-block">Ver detalhes</a>
                 </div>
               </div>
-            </div>
-            <div class="col">
               <div class="card">
-                <img src="img/hoteis/hotel-2.jpg" class="card-img-top" alt="...">
+                <img src="img/hoteis/hotel-3.jpg" class="img-fluid rounded-start" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">NomeHotel</h5>
                   <div class="pb-3">
@@ -198,156 +320,158 @@
             </div>
           </div>
         </section>
-        
-        <!-- carousel top cidades brs -->
-        <section id="top-cidades-br" class="container-fluid mx-auto">
-          <h1 class="pt-4 pb-2">Descubra o Brasil</h1>
-          <div id="carouselExampleCaptions" class="carousel slide py-3">
-        
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+        <!-- cards passagens  -->
+        <section id="passagens" class="container-fluid py-3 my-3 mx-auto">
+          
+          <div class=" " id="ver-mais">
+            <div class="d-flex justify-content-between">
+              <h1>Passagens Aéreas</h1>
+              <a class="btn" href="passagens.html">Ver mais</a>
             </div>
-        
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="img/cidades/sp.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption">
-                  <h5>São Paulo</h5>
-                  <p>Some representative placeholder content for the first slide.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="img/cidades/rio.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption">
-                  <h5>Second slide label</h5>
-                  <p>Some representative placeholder content for the second slide.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="img/cidades/salvador.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption">
-                  <h5>Third slide label</h5>
-                  <p>Some representative placeholder content for the third slide.</p>
-                </div>
-              </div>
-            </div>
-            <div class="btn-carousel">
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-            </div>
-            <div class="btn-carousel">
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                <span class="carousel-control-next-icon " aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
+            <p class="display-4">Compre passagens com um clique.</p>
           </div>
-          <div class="text-center" id="ver-mais">
-            <a href="destinos.html">Ver mais destinos</a>
-          </div>
-         </section>
-        
-        <!-- cards pacotes  -->
-        <section id="pacotes" class="container-fluid py-3 my-3 mx-auto">
-          <h1>Pacotes</h1>
-          <div class="row row-cols g-4 py-3">
-            <div class="col-12 col-lg-6">
-              <div class="card mb-3" >
-                <div class="row g-0">
-                  <div class="col-sm-4">
+          
+          <div class="d-flex flex-nowrap justify-content-between overflow-x-scroll   ">
+            <div class="">
+              <div class="card " >
                     <img src="img/hoteis/hotel-2.jpg" class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-sm-8">
                     <div class="card-body">
-                      <h5 class="card-title">Pacote para nomeDestino</h5>
-                      <div class="pb-3">
-                        <div class="rate">4,3</div>
-                        <div class="d-inline">
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-half"></i>
-                        </div>
-                      </div>
-                  <p><i class="bi bi-airplane"></i>
-                    Voo direto Origem <i class="bi bi-arrow-left-right"></i> Destino</p>
-                  <p><i class="bi bi-building"></i> Hotel nomeHotel</p>
-                  <p class="card-text">Breve descrição do hotel.</p>
-                  <p>Preço a partir de <strong>R$ Preço</strong></p>
-                  <a href="em-construcao.html" class=" btn btn-primary d-block">Ver detalhes</a>
+                      <h5 class="card-title">Passagem para nomeDestino</h5>
+                      <p class="card-subtitle">Classe: Econômica</p>
+                      <p><i class="bi bi-airplane"></i> Origem </p>
+                      <p><i class="bi bi-airplane"></i> Destino</p>
                     </div>
-                  </div>
-                </div>
+                    <div class="card-footer">
+                      <p>Preço a partir de <strong>R$ Preço</strong></p>
+                      <a href="em-construcao.html" class=" btn btn-primary d-block">Ver detalhes</a>
+                    </div>
               </div>
             </div>
-            <div class="col-12 col-lg-6">
-              <div class="card mb-3" >
-                <div class="row g-0">
-                  <div class="col-sm-4">
-                    <img src="img/hoteis/hotel-1.jpg" class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-sm-8">
+            <div class="">
+              <div class="card " >
+                    <img src="img/hoteis/hotel-2.jpg" class="img-fluid rounded-start" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Pacote para nomeDestino</h5>
-                      <div class="pb-3">
-                        <div class="rate">4,3</div>
-                        <div class="d-inline">
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-half"></i>
-                        </div>
-                      </div>
-                  <p><i class="bi bi-airplane"></i>
-                    Voo direto Origem <i class="bi bi-arrow-left-right"></i> Destino</p>
-                  <p><i class="bi bi-building"></i> Hotel nomeHotel</p>
-                  <p class="card-text">Breve descrição do hotel.</p>
-                  <p>Preço a partir de <strong>R$ Preço</strong></p>
-                  <a href="em-construcao.html" class=" btn btn-primary d-block">Ver detalhes</a>
+                      <h5 class="card-title">Passagem para nomeDestino</h5>
+                      <p class="card-subtitle">Classe: Econômica</p>
+                      <p><i class="bi bi-airplane"></i> Origem </p>
+                      <p><i class="bi bi-airplane"></i> Destino</p>
                     </div>
-                  </div>
+                    <div class="card-footer">
+                      <p>Preço a partir de <strong>R$ Preço</strong></p>
+                      <a href="em-construcao.html" class=" btn btn-primary d-block">Ver detalhes</a>
+                    </div>
                 </div>
               </div>
-            </div>
-            <div class="col-12 col-lg-6">
-              <div class="card mb-3" >
-                <div class="row g-0">
-                  <div class="col-sm-4">
-                    <img src="img/hoteis/hotel-5.jpg" class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-sm-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Pacote para nomeDestino</h5>
-                      <div class="pb-3">
-                        <div class="rate">4,3</div>
-                        <div class="d-inline">
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-fill"></i>
-                          <i class="bi bi-star-half"></i>
-                        </div>
+              <div class="">
+                <div class="card " >
+                      <img src="img/hoteis/hotel-2.jpg" class="img-fluid rounded-start" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Passagem para nomeDestino</h5>
+                        <p class="card-subtitle">Classe: Econômica</p>
+                        <p><i class="bi bi-airplane"></i> Origem </p>
+                        <p><i class="bi bi-airplane"></i> Destino</p>
                       </div>
-                  <p><i class="bi bi-airplane"></i>
-                    Voo direto Origem <i class="bi bi-arrow-left-right"></i> Destino</p>
-                  <p><i class="bi bi-building"></i> Hotel nomeHotel</p>
-                  <p class="card-text">Breve descrição do hotel.</p>
-                  <p>Preço a partir de <strong>R$ Preço</strong></p>
-                  <a href="em-construcao.html" class=" btn btn-primary d-block">Ver detalhes</a>
-                    </div>
-                  </div>
+                      <div class="card-footer">
+                        <p>Preço a partir de <strong>R$ Preço</strong></p>
+                        <a href="em-construcao.html" class=" btn btn-primary d-block">Ver detalhes</a>
+                      </div>
                 </div>
               </div>
-            </div>
+              <div class="">
+                <div class="card " >
+                      <img src="img/hoteis/hotel-2.jpg" class="img-fluid rounded-start" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Passagem para nomeDestino</h5>
+                        <p class="card-subtitle">Classe: Econômica</p>
+                        <p><i class="bi bi-airplane"></i> Origem </p>
+                        <p><i class="bi bi-airplane"></i> Destino</p>
+                      </div>
+                      <div class="card-footer">
+                        <p>Preço a partir de <strong>R$ Preço</strong></p>
+                        <a href="em-construcao.html" class=" btn btn-primary d-block">Ver detalhes</a>
+                      </div>
+                </div>
+              </div>
           </div>
-          <div class="text-center" id="ver-mais">
-            <a href="promocoes.html">Ver mais promoções</a>
+        </section>
+        
+        <!-- cards Promoções  -->
+        <section id="promocoes" class="container-fluid py-3 my-3 mx-auto">
+          
+          <div class=" " id="ver-mais">
+            <div class="d-flex justify-content-between">
+              <h1>Pacotes promocionais</h1>
+              <a class="btn" href="promocoes.html">Ver mais</a>
+            </div>
+          <p class="display-4">Adquira pacotes com preços incríveis.</p>
+          </div>
+          
+          <div class="d-flex flex-nowrap justify-content-between overflow-x-scroll   ">
+            <div class="">
+              <div class="card " >
+                    <img src="img/hoteis/hotel-2.jpg" class="img-fluid rounded-start" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Pacote para nomeDestino</h5>
+                      <div class="pb-3">
+                      </div>
+                      <p><i class="bi bi-airplane"></i>
+                        Voo direto Origem <i class="bi bi-arrow-left-right"></i> Destino</p>
+                      <p><i class="bi bi-building"></i> Hotel nomeHotel</p>
+                      <p class="card-text">Breve descrição do hotel.</p>
+                      <p>Preço a partir de <strong>R$ Preço</strong></p>
+                      <a href="em-construcao.html" class=" btn btn-primary d-block">Ver detalhes</a>
+                    </div>
+              </div>
+            </div>
+            <div class="">
+              <div class="card " >
+                    <img src="img/hoteis/hotel-2.jpg" class="img-fluid rounded-start" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Pacote para nomeDestino</h5>
+                      <div class="pb-3">
+                      </div>
+                      <p><i class="bi bi-airplane"></i>
+                        Voo direto Origem <i class="bi bi-arrow-left-right"></i> Destino</p>
+                      <p><i class="bi bi-building"></i> Hotel nomeHotel</p>
+                      <p class="card-text">Breve descrição do hotel.</p>
+                      <p>Preço a partir de <strong>R$ Preço</strong></p>
+                      <a href="em-construcao.html" class=" btn btn-primary d-block">Ver detalhes</a>
+                    </div>
+              </div>
+            </div>
+            <div class="">
+              <div class="card " >
+                    <img src="img/hoteis/hotel-2.jpg" class="img-fluid rounded-start" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Pacote para nomeDestino</h5>
+                      <div class="pb-3">
+                      </div>
+                      <p><i class="bi bi-airplane"></i>
+                        Voo direto Origem <i class="bi bi-arrow-left-right"></i> Destino</p>
+                      <p><i class="bi bi-building"></i> Hotel nomeHotel</p>
+                      <p class="card-text">Breve descrição do hotel.</p>
+                      <p>Preço a partir de <strong>R$ Preço</strong></p>
+                      <a href="em-construcao.html" class=" btn btn-primary d-block">Ver detalhes</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="">
+                  <div class="card " >
+                        <img src="img/hoteis/hotel-2.jpg" class="img-fluid rounded-start" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Pacote para nomeDestino</h5>
+                          <div class="pb-3">
+                          </div>
+                          <p><i class="bi bi-airplane"></i>
+                            Voo direto Origem <i class="bi bi-arrow-left-right"></i> Destino</p>
+                          <p><i class="bi bi-building"></i> Hotel nomeHotel</p>
+                          <p class="card-text">Breve descrição do hotel.</p>
+                          <p>Preço a partir de <strong>R$ Preço</strong></p>
+                          <a href="em-construcao.html" class=" btn btn-primary d-block">Ver detalhes</a>
+                        </div>
+                  </div>
+                </div>
           </div>
         </section>
       </div>
