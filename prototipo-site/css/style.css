@@ -97,7 +97,7 @@ background-color: transparent !important;
 
 .carousel-item {
     height: 100%;
-    background: #333 no-repeat center center/cover;
+    background: #FFF no-repeat center center/cover;
     
 }
 
@@ -161,8 +161,9 @@ main {
 #promocoes .card,
 #passagens .card,
 #destinos .card {
-  min-width: 230px !important;
-  margin: 0 1rem 1rem 0;
+    background: #FFF;
+    min-width: 230px !important;
+    margin: 0 1rem 1rem 0;
 }
 
 #ver-mais .btn {
