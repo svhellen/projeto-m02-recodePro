@@ -22,7 +22,7 @@
         right: 0;
         z-index: 10;
       }
-
+/* 
       .offcanvas-lg a {
         color: rgba(0, 0, 0, 0.5);
       }
@@ -35,7 +35,7 @@
       .offcanvas-lg a:hover {
         color: rgba(0, 0, 0, 0.7);
         font-weight: bold;
-      }
+      } */
    
       #offcanvas-btn {
         background-color: transparent !important;
@@ -43,7 +43,7 @@
 
       header .carousel-caption {
         font-family: 'Times New Roman', Times, serif;
-        background-color: red;
+        background-color: rgba(255, 0, 0, 0.418);
         height: 12em;
         margin-bottom: 10em;
       }
@@ -91,7 +91,7 @@
         }
       }
 
-       @media (min-width: 650px) {
+       /* @media (min-width: 650px) {
     
           .offcanvas-lg {
             background: transparent !important;
@@ -111,7 +111,7 @@
             font-weight: bold;
           }
           
-      }
+      } */
 
     </style>
 </head>
@@ -119,7 +119,7 @@
     <header class="row" >
 
       <!-- navbar -->
-      <nav class="navbar navbar-expand-md " id="menu">
+      <nav class="navbar navbar-expand-md navbar-dark" id="menu">
         <div class="container-fluid">
           <a class="navbar-brand " href="#" style="color: #FFF;"><img src="img/teste-logo.png" alt="logo" id="logo" >VivaVia Travel</a>
           <!-- botao menu telas pequenas -->
@@ -130,9 +130,9 @@
           <div class="offcanvas-lg offcanvas-end " tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasResponsiveLabel"><img src="img/teste-logo.png" alt="logo" id="logo" >VivaVia Travel </h5>
-              <button type="button" class="btn-close " data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
             </div>
-            <div class="  ">
+            <div class=" ">
               <!-- navbar links -->
               <ul class="navbar-nav offcanvas-body off col-md-8">
                 <li class="nav-item">

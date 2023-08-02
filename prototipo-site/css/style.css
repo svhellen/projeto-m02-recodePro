@@ -36,12 +36,19 @@ header {
 #menu {
     border-bottom: 2px solid rgba(255, 255, 255, 0.5);
     padding: 0;
+
 }
 
-.offcanvas-lg .offcanvas-header {
-    border-bottom: 2px solid rgba(3, 3, 3, 0.5);
+.offcanvas-lg {
+    
+    background-color: var(--cor3);
 }
 
+ .offcanvas-lg .offcanvas-header {
+    color: var(--text-color2);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+/*
 .offcanvas-lg a {
 color: rgba(0, 0, 0, 0.5);
 }
@@ -54,10 +61,11 @@ font-weight: bold;
 .offcanvas-lg a:hover {
 color: rgba(0, 0, 0, 0.7);
 font-weight: bold;
-}
+} */
 
 #offcanvas-btn {
-background-color: transparent !important;
+    color: var(--text-color2);
+    background-color: transparent !important;
 }
 
 .navbar,
@@ -239,7 +247,7 @@ footer i, footer i:hover {
     
 } */
 
-@media (min-width: 650px) {
+/* @media (min-width: 650px) {
     
     .offcanvas-lg {
       background: transparent !important;
@@ -259,4 +267,4 @@ footer i, footer i:hover {
       font-weight: bold;
     }
     
-}
+} */
