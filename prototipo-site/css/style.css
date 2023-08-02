@@ -166,6 +166,10 @@ main {
     margin: 0 1rem 1rem 0;
 }
 
+.card:hover {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
 #ver-mais .btn {
     font-size: .8em;
     color: var(--text-color1);
