@@ -28,10 +28,7 @@ body {
     width: 20px;
 }
 
-/* Barra de navegação */
-
-header {
-} 
+/* Barra de navegação */ 
 
 #menu {
     border-bottom: 2px solid rgba(255, 255, 255, 0.5);
@@ -128,43 +125,6 @@ main {
     margin: auto;
 }
 
-/* #top-cidades-br {
-    display: flex;
-    gap: 16px;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-} */
-
-/* #top-cidades-br .carousel-item {
-    max-width: 150px;
-} */
-
-/* #top-cidades-br .carousel-item {
-    min-width: 220px;
-    max-width: 350px;
-}
-
-#btn-carousel {
-    background: red;
-    min-width: 100px;
-    max-width: 150px;
-}
-
-#top-cidades-br {
-    min-width: 240px;
-    max-width: 950px;
-}
-
-#hospedagens .card {
-    min-width: 280px;
-    max-width: 350px;
-    margin: auto;
-}
-
-#pacotes .card {
-    min-width: 300px;
-} */
-
 #hospedagens .card,
 #promocoes .card,
 #passagens .card,
@@ -208,10 +168,14 @@ main {
 .bi-star {
     color: #FFCF00;
 }
-/*
- #top-cidades-br {
-    min-height: 300px;
-} */
+
+.balao-promo {
+    color: var(--text-color2);
+    background: red;
+    border: 2px solid red;
+    border-radius: 5px;
+    padding: 0px 10px;
+}
 
 /* footer */
 
