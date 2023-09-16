@@ -29,6 +29,9 @@ body {
 }
 
 /* Barra de navegação */ 
+header {
+    margin: 0 !important;
+}
 
 #menu {
     border-bottom: 2px solid rgba(255, 255, 255, 0.5);
@@ -100,6 +103,10 @@ font-weight: bold;
     border: var(--cor4);
 }
 
+#carousel-principal {
+    padding: 0 !important;
+}
+
 .carousel-item {
     height: 100%;
     background: #FFF no-repeat center center/cover;
@@ -132,6 +139,12 @@ main {
     background: #FFF;
     min-width: 230px !important;
     margin: 0 1rem 1rem 0;
+}
+
+#hospedagens .card img,
+#promocoes .card img,
+#passagens .card img {
+    height: 180px;
 }
 
 .card:hover {
